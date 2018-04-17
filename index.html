@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <script>
+      window.addEventListener('error', function(e){
+        console.log(e.error.stack);
+      })
+      function error1(){
+        console.log('a'.toExponential(3));
+      }
+    </script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <button onclick="error1()">Trigger error 1</button>
+    <button onclick="error2()">Trigger error 2</button>
+  </body>
+</html>
